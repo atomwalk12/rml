@@ -6,6 +6,11 @@ project(rml
   LANGUAGES CXX
 )
 
+# Set default compilation flags
+# Remember to move compile_commands.json from the build to the
+# root directory to ensure emacs lsp server works correctly.
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Initialize some default paths
 include(GNUInstallDirs)
 
