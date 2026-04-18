@@ -14,10 +14,10 @@ build-backend = "scikit_build_core.build"
 [project]
 name = "rml"
 version = "0.0.1"
-description = "Add short description here"
+description = "An experimental project that implements common deep learning primitives in C++/CUDA, including also bindings for Python use."
 readme = "README.md"
 maintainers = [
-    { name = "Razvan Florian Vasile", email = "your@email.com" },
+    { name = "Razvan Florian Vasile", email = "atomwalk@duck.com" },
 ]
 requires-python = ">=3.10"
 license-files = ["LICEN[CS]E*"]

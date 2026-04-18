@@ -1,5 +1,4 @@
-# Find the Catch2 package
-find_package(Catch2 3 REQUIRED)
+# Catch2 package is already imported from the root CMakeLists.txt
 
 # Include Catch2's CMake helper functions (e.g., catch_discover_tests).
 include(Catch)
