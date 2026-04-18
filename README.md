@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/atomwalk12/rml/ci.yml?branch=main)](https://github.com/atomwalk12/rml/actions/workflows/ci.yml)
-[![PyPI Release](https://img.shields.io/pypi/v/rml.svg)](https://pypi.org/project/rml)
 [![Documentation Status](https://readthedocs.org/projects/rml/badge/)](https://rml.readthedocs.io/)
 
 RML is an experimental project that implements common deep learning primitives in C++/CUDA, comprising also of bindings for Python use.
