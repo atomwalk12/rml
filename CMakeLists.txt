@@ -11,7 +11,10 @@ project(rml
 # root directory to ensure emacs lsp server works correctly.
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-if(PROJECT_IS_TOP_LEVEL AND CMAKE_EXPORT_COMPILE_COMMANDS)
+# CMake only generates compile_commands.json for Ninja and Makefile generators.
+if(PROJECT_IS_TOP_LEVEL
+   AND CMAKE_EXPORT_COMPILE_COMMANDS
+   AND (CMAKE_GENERATOR MATCHES "Ninja" OR CMAKE_GENERATOR MATCHES "Makefiles"))
   add_custom_target(copy_compile_commands ALL
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
             ${CMAKE_BINARY_DIR}/compile_commands.json
