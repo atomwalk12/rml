@@ -35,7 +35,7 @@ add_subdirectory(src)
 
 if(PROJECT_IS_TOP_LEVEL)
   # Compile the application executable
-  add_subdirectory(app)
+  add_subdirectory(experiments)
 endif()
 
 if(PROJECT_IS_TOP_LEVEL)

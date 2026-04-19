@@ -45,6 +45,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+build-no-python/
 develop-eggs/
 dist/
 downloads/
@@ -172,3 +173,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# User ignore files
+# emacs lsp server config: generated under build;
+# must be moved in the root directory.
+compile_commands.json

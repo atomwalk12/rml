@@ -20,7 +20,7 @@ comment:
   require_changes: no
 
 ignore:
-  - app
+  - experiments
   - python
   - "**/tests"
   - "**/Catch2"

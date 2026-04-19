@@ -1,14 +1,14 @@
 # Declare an executable target
-add_executable(rml_app)
+add_executable(toy_network)
 
 # Add source files to the executable target
-target_sources(rml_app
+target_sources(toy_network
   PRIVATE
-    rml_app.cpp
+    toy_network.cpp
 )
 
 # Link the executable against the library
-target_link_libraries(rml_app
+target_link_libraries(toy_network
   PRIVATE
     rml
 )
