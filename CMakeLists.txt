@@ -1,10 +1,16 @@
 cmake_minimum_required(VERSION 3.23)
 
+option(rml_ENABLE_CUDA "Enable CUDA support" ON)
+
 # Set a name and a version number for your project:
 project(rml
   VERSION 0.0.1
-  LANGUAGES CXX CUDA
+  LANGUAGES CXX
 )
+
+if(rml_ENABLE_CUDA)
+  enable_language(CUDA)
+endif()
 
 # Set default compilation flags
 # Remember to move compile_commands.json from the build to the
@@ -46,7 +52,7 @@ endif()
 add_subdirectory(src)
 
 
-if(PROJECT_IS_TOP_LEVEL)
+if(PROJECT_IS_TOP_LEVEL AND rml_ENABLE_CUDA)
   # Compile the application executable
   add_subdirectory(experiments)
 endif()

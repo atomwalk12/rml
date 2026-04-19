@@ -66,6 +66,16 @@ if read_the_docs_build:
     cwd = os.getcwd()
     os.makedirs("build-cmake", exist_ok=True)
     builddir = os.path.join(cwd, "build-cmake")
-    subprocess.check_call("cmake -Drml_BUILD_DOCS=ON -Drml_BUILD_TESTING=OFF -Drml_BUILD_PYTHON=OFF ../..".split(), cwd=builddir)
+    subprocess.check_call(
+        [
+            "cmake",
+            "-Drml_BUILD_DOCS=ON",
+            "-Drml_BUILD_TESTING=OFF",
+            "-Drml_BUILD_PYTHON=OFF",
+            "-Drml_ENABLE_CUDA=OFF",
+            "../..",
+        ],
+        cwd=builddir,
+    )
     subprocess.check_call("cmake --build . --target rml-doxygen".split(), cwd=builddir)
     breathe_projects["rml"] = os.path.join(builddir, "doc", "xml")
