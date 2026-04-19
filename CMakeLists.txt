@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.23)
 # Set a name and a version number for your project:
 project(rml
   VERSION 0.0.1
-  LANGUAGES CXX
+  LANGUAGES CXX CUDA
 )
 
 # Set default compilation flags
@@ -13,15 +13,15 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # CMake only generates compile_commands.json for Ninja and Makefile generators.
 if(PROJECT_IS_TOP_LEVEL
-   AND CMAKE_EXPORT_COMPILE_COMMANDS
-   AND (CMAKE_GENERATOR MATCHES "Ninja" OR CMAKE_GENERATOR MATCHES "Makefiles"))
+    AND CMAKE_EXPORT_COMPILE_COMMANDS
+    AND (CMAKE_GENERATOR MATCHES "Ninja" OR CMAKE_GENERATOR MATCHES "Makefiles"))
   add_custom_target(copy_compile_commands ALL
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            ${CMAKE_BINARY_DIR}/compile_commands.json
-            ${CMAKE_SOURCE_DIR}/compile_commands.json
+    ${CMAKE_BINARY_DIR}/compile_commands.json
+    ${CMAKE_SOURCE_DIR}/compile_commands.json
     COMMENT "Copying compile_commands.json to source root"
     VERBATIM
-    )
+  )
 endif()
 
 # Initialize some default paths

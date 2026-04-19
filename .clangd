@@ -1,0 +1,8 @@
+CompileFlags:
+  Remove:
+    - -forward-unknown-to-host-compiler
+    - --options-file
+    - CMakeFiles/*.dir/includes_CUDA.rsp
+    - --generate-code=*
+  Add:
+    - --cuda-path=/opt/cuda
