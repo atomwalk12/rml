@@ -11,7 +11,7 @@ An experimental project that implements common deep learning primitives in C++/C
 * A C++23-compliant compiler
 * CMake `>= 3.23`
 * Doxygen (optional, documentation building is skipped if missing)
-* Python `>= 3.10` and `pybind11` package for building Python bindings
+* Python `>= 3.10` package for building Python bindings
 
 ## Build
 
@@ -26,9 +26,9 @@ cmake --build build
 
 The build process can be customized with the following CMake variables:
 
-* `rml_BUILD_TESTING`: Include the test suite (default: `ON`)
+* `rml_BUILD_TESTING`: Include the CUDA test suite (default: `ON`)
 * `rml_BUILD_DOCS`: Include documentation (default: `ON`)
-* `rml_BUILD_PYTHON`: Include Python bindings (default: `ON`)
+* `rml_BUILD_PYTHON`: Include Python bindings (this requires `pybind11`) (default: `ON`)
 
 Example usage:
 
@@ -36,7 +36,7 @@ Example usage:
 cmake -Drml_BUILD_TESTING=ON -Drml_BUILD_DOCS=OFF -Drml_BUILD_PYTHON=ON -B build
 ```
 
-To install the Python dependencies run:
+For Python dependencies run:
 
 ```shell
 python -m pip install .
@@ -44,19 +44,14 @@ python -m pip install .
 
 ## Tests
 
-Ensure the library is built with `-Drml_BUILD_TESTING=ON`. Run tests with:
+Ensure the library is built with `-Drml_BUILD_TESTING=ON`.
 
 ```shell
+# For CUDA/C++ tests:
 cd build
 ctest
 
-```
-
-
-The Python tests do not have special dependencies. From the root directory run:
-
-```bash
-python -m pip install .
+# For Python tests (from root directory):
 pytest
 ```
 
