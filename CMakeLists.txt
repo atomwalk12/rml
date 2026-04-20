@@ -34,7 +34,7 @@ endif()
 include(GNUInstallDirs)
 
 # Define build options
-option(rml_BUILD_TESTING "Enable building of tests" OFF)
+option(rml_BUILD_TESTING "Enable building of tests" ON)
 
 if(PROJECT_IS_TOP_LEVEL)
   option(rml_BUILD_PYTHON "Enable building of Python bindings" ON)
