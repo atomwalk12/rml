@@ -4,7 +4,7 @@
 
 # rml
 
-An experimental project that implements common deep learning primitives in C++/CUDA, the library also provides Python bindings to facilitate common usage patterns. Its main long-term purpose is to implement classical CNN architectures such as LeNet, AlexNet, GoogleNet, VGGNet and ResNet from first principles.
+An experimental project that implements common deep learning primitives in C++/CUDA, the library also provides Python bindings to facilitate common usage patterns. Its main long-term purpose is to implement classical CNN architectures such as LeNet, AlexNet, GoogleNet, VGGNet and ResNet from the ground up.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ The build process can be customized with the following CMake variables:
 
 * `rml_BUILD_TESTING`: Include the CUDA test suite (default: `ON`)
 * `rml_BUILD_DOCS`: Include documentation (default: `ON`)
-* `rml_BUILD_PYTHON`: Include Python bindings (this requires `pybind11`) (default: `ON`)
+* `rml_BUILD_PYTHON`: Include Python bindings (requires `pybind11`) (default: `ON`)
 
 Example usage:
 
