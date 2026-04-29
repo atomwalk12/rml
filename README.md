@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/atomwalk12/rml/ci.yml?branch=main)](https://github.com/atomwalk12/rml/actions/workflows/ci.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rfvasile/rml/ci.yml?branch=main)](https://github.com/atomwalk12/rml/actions/workflows/ci.yml)
 [![Documentation Status](https://readthedocs.org/projects/rml/badge/)](https://rml.readthedocs.io/)
 
 # rml
@@ -18,7 +18,7 @@ An experimental project that implements common deep learning primitives in C++/C
 To install the C++/CUDA core library run:
 
 ```shell
-git clone https://github.com/atomwalk12/rml.git
+git clone https://github.com/rfvasile/rml.git
 cd rml
 cmake -B build
 cmake --build build
